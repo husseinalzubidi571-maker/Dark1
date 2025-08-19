@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تواصل معنا</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+    body {
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: #fff;
+    }
+    .container {
+      background: rgba(0,0,0,0.3);
+      padding: 50px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease;
+    }
+    h1 {
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+    .buttons a {
+      display: inline-block;
+      margin: 15px;
+      padding: 15px 35px;
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .buttons a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.2);
+      transition: left 0.5s;
+    }
+    .buttons a:hover::before { left: 0; }
+    .buttons a:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+
+    .whatsapp { background-color: #25D366; }
+    .telegram { background-color: #0088cc; }
+    .instagram { background-color: #C13584; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>تواصل معنا</h1>
+    <div class="buttons">
+      <a href="https://wa.me/9647721720170" class="whatsapp" target="_blank">واتساب</a>
+      <a href="https://t.me/rm_062" class="telegram" target="_blank">تيليجرام</a>
+      <a href="https://instagram.com/97h3u" class="instagram" target="_blank">انستغرام</a>
+    </div>
+  </div>
+
+  <script>
+    // مثال JS بسيط: عند الضغط على أي زر تظهر رسالة
+    const buttons = document.querySelectorAll('.buttons a');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        console.log(`تم الضغط على: ${btn.textContent}`);
+      });
+    });
+  </script>
+</body>
+</html>#80FF00
